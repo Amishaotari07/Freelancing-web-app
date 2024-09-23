@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createjob</title>
+    <link rel="stylesheet" href="../css/createjob.css">
+</head>
+
+<body>
+    <header id="_heading"><h1>Post A Job</h1></header>
+    <div id="_middle">{{userData.username}} please enter your job discription</div>
+    <div id="_container">
+        <form action="/createjob/{{userData.username}}" method="POST">
+            <input class="input" type="text" name="genere" id="_genere" placeholder="Genere of the job">
+            <textarea class="input" name="description" id="_description" placeholder="job discription" cols="30" rows="10"></textarea>
+            <input type="submit" value="Request job" name="submit" class="input">
+            <p style="color:red">{{jobdone}}</p>
+        </form>
+    </div>
+</body>
+
+</html>

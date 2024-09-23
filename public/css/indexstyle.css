@@ -1,0 +1,250 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+    /* text-decoration: none; */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;  
+    background-color: #272727;
+
+    
+}
+header{
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 10%;
+    border-bottom: 1px solid rgb(0, 157, 255);
+}
+
+#_navbar ul{
+    display: flex;
+    /* margin: 10px 15px; */
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+}
+#_navbar{
+    /* border: 2px solid blueviolet; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+#_navbar ul li{
+    list-style: none;
+    /* border: 2px solid yellow; */
+    margin: 0px 5px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#_navbar ul li a{
+    /* border: 2px solid red; */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding:10px 25px;
+    /* width: 0%; */
+    position: relative;
+    /* border: 2px solid rgb(0, 157, 255);   */
+}
+
+#_navbar a::before{
+    content: "";
+    border: 2px solid rgb(0, 157, 255);  
+    width: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+
+#_navbar a:hover::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black ;
+}
+
+#_navbar #_home::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black;
+}
+
+#_search{
+    /* border: 2px solid red; */
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#_search_bar{
+    border-radius: 60px;
+    padding: 0px 5px;
+    height: 32%;
+    font-size: 1rem;
+
+    border: none;
+    outline: none;
+}
+
+#_search_button{
+    border-radius: 60px;
+    height: 32%;
+    text-align: center;
+    align-items: center;
+    padding: 1px 5px;
+    font-size: 0.8rem;
+
+    position: absolute;
+    right: 0px;
+
+    border: none;
+    outline: none;
+    background-color: rgb(0, 157, 255);
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------- MENU -------------------------------------------- */
+
+#_menu{
+
+    width: 100%;
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(1,1fr);
+}
+#_left{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+#_left h1{
+    text-shadow: 0px 0px 20px black;
+    font-size: 7em;
+    color: rgb(0, 157, 255);
+
+    width: 85%;
+
+    position: relative;
+    bottom: 20px;
+}
+
+
+#_right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#_signin_form{
+
+    height: 75%;
+    width: 85%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right,rgba(125, 125, 125, 0.998),rgba(125, 125, 125, 0.998));
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px black;
+
+    
+}
+
+#_signin_form h1{
+    color: white;
+}
+
+#_signin_form #_email{
+
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+
+    padding: 0px 5px;
+
+}
+
+#_signin_form #_err{
+    color: red;
+}
+
+#_signin_form #_password{
+    width: 80%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    padding: 0px 5px;
+
+}
+
+#_signin_form #_forget_password{
+    margin-bottom: 10%;
+    text-align: left;
+    color: #272727;
+}
+
+#_signin_form #_login_button{
+    background-color: white;
+    width: 20%;
+    height: 10%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+}
+
+#_signup a{
+    color: #272727;
+}
+#_signin_form #_login_button:hover{
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.2);
+    background-color:rgb(0, 157, 255);
+}

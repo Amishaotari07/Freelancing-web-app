@@ -1,0 +1,158 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:#272727;
+}
+
+#_heading{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    color: white;
+    background-color:rgb(0, 157, 255);
+    font-size: 1.5em;
+    /* margin-left: 2vw; */
+}
+
+#_heading a{
+    position: absolute;
+    top: 1.2vh;
+    right: 2vw;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 2vh;
+    padding: 1vh;
+}
+
+#_heading #pro{
+    margin: auto;
+    position: absolute;
+    top: 1.4vh;
+    right: 40%;
+}
+
+#_heading h1{
+    margin-left: 2vw;
+    box-shadow: 0px 0px 5px black;
+}
+
+#_heading h1::before{
+
+    box-shadow: 0px 0px 5px black;
+}
+
+#_left{
+    /* border: 2px solid red; */
+    background-color: #373737;
+    height: 100%;
+    width: 15vw;
+    z-index: 200;
+    position: fixed;
+    top: 10vh;
+}
+
+
+#_left #_createjob a{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 157, 255);
+    font-size: 2em;
+    /* margin-top: 2vh;  */
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+#_left #_createjob a:hover{
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.05);
+}
+
+#_left #_createjob p{
+    color: rgb(0, 157, 255);
+    font-size: 3vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#_contents{
+    display: flex;
+    flex-direction: row;
+    height: 90.9%;
+    width: 100%;
+    position: relative;
+}
+
+/* right side code */
+
+#_right{
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 10vh;
+    height: 100%;
+    width: 89%;
+    /* color: red; */
+}
+
+#_right ._jobrequest{
+    /* border: 2px solid blue; */
+    box-shadow: 0px 0px 5px black;
+    border-radius: .5em;
+    margin-bottom: 2vh;
+    width: 90%;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    position: relative;
+    left: 17vw;
+    /* padding-bottom: 2%; */
+    /* height: 40%; */
+    background-color: #373737;
+}
+
+#_right ._jobrequest h3{
+    color: white;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 1vh;
+    margin-bottom: 2vh;
+}
+#_right ._jobrequest p{
+    color: white;
+    /* width: 40%; */
+    
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#_contact{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 157, 255);
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 1vh 1vw;
+    /* margin-left: 75%; */
+    width: 10%;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    /* float: right; */
+}

@@ -1,0 +1,129 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+}
+
+#_heading{
+    background-color: rgb(0, 157, 255);
+    color: white;
+    padding: 2vh;
+}
+
+#_heading h1{
+    box-shadow: 0px 0px 5px black;
+    margin-left: 2vw;
+    padding: 1vh 2vw;
+}
+
+#container{
+    position: relative;
+    height: 20vh;
+    top: 0vh;
+    right: 0vw;
+    /* border: 2px solid blue; */
+    width: 98vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 19, 19, 0.685);
+}
+
+#profilepic{
+    border: 2px solid white;  
+    /* width: 10vw; */
+    padding: 2vh;
+    text-align: center;
+    /* height: 5vh; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;  
+    border-radius: 30vh;
+    left: 50%;
+    color: white;
+}
+
+#container2{
+    /* border: 2px solid blue; */
+    /* border: 2px solid green; */
+    height: 67.8vh;
+    box-shadow: 0px 0px 0px 5px black;
+    position: relative;
+}
+
+#navbar{
+    background-color: rgb(0, 157, 255);
+    padding: 3vh;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+#navbar ul li{
+    list-style: none;
+    margin: 0vh 1vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 3vh;
+    width: 0%;
+    background-color: white;
+}
+
+#navbar ul li a{
+    content: "";
+    z-index: -1;
+    text-decoration: none;
+    color: white;
+    /* padding: 3vh; */
+    /* background-color: white; */
+    color: black;
+    height: 100%;
+    transition-duration: 0.3s;
+}
+
+#navbar ul li a:hover{
+    background-color: #373737;
+    color: white;
+}
+
+#posts{
+    /* border: 2px solid red; */
+    position: absolute;
+    height: 86.5%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.divs{
+    height: auto;
+    width: 90%;
+    /* height: 50%; */
+    overflow: hidden;
+    
+}
+
+.divs img{
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.divs .desc{
+    margin-left:20% ;
+    text-align: justify;
+    color: white;
+}

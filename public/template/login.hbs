@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{userData.username}} profile</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+
+    {{!-- <script src="../script/chatclient.js"></script> --}}
+
+    <div id="_heading">
+        <header>
+            <h1>Welcome {{userData.username}}</h1>
+            <a id="pro" href="/profile/{{userData.username}}">My profile</a>
+            <a href="/logout" name="logout">Log out</a>
+        </header>
+    </div>
+    <div id="_contents">
+        <div id="_left">
+            <div id="_createjob">
+                <a href="/createjob/{{userData.username}}">+</a>
+                <p>create job</p>
+            </div>
+        </div>
+        <div id="_right">
+            {{#each jobreq}}
+            <div class="_jobrequest" id="{{this._id}}">
+                <h3><a href="/profile2/{{this.username}}"> user name: {{this.username}}</a></h3>
+                <h3>Type/ skill needed: </h3>
+                <p>{{this.genere}}</p>
+                <h3> Job description:</h3>
+                <p>{{this.description}}</p>
+                
+                <form>
+                    <a href="/bid/{{this.description}}" id="_contact">Bid</a>
+                </form>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</body>
+
+</html>

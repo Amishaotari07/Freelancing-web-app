@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body>
+    <header>
+        <h1>Select a file</h1>
+    </header>
+    <div id="container">
+        <div id="form">
+            <form action="/post/{{userData.username}}" enctype="multipart/form-data" method="POST">
+                <div id="pic">
+                    <img src="" alt="Selected photo" id="photoPreview">
+                </div>
+                <div id="description">
+                    <textarea name="desc" id="desc" cols="30" rows="10" placeholder="description"></textarea>
+                </div>
+                <input type="file" name="image" id="photoInput">
+                <input type="submit" name="post" id="post" value="POST">
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        const photoInput = document.getElementById('photoInput');
+        const photoPreview = document.getElementById('photoPreview');
+
+        photoInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                photoPreview.src = event.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+    </script>
+</body>
+
+</html>

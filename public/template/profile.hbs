@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <div id="prime">
+        <div id="_heading">
+            <h1>{{userData.username}}</h1>
+        </div>
+        <div id="container">
+            <div id="profilepic">
+                {{userData.username}}
+            </div>
+        </div>
+
+        <div id="container2">
+            <div id="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/aquiredjobs/{{userData.username}}">Aquired Jobs</a></li>
+                        <li><a href="/myjobs/{{userData.username}}">My Jobs</a></li>
+                        <li><a href="/post/{{userData.username}}">Post Something +</a></li>
+                        <li><a href="/givenjobs/{{userData.username}}">Given Jobs</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="posts">
+                <div class="divs">
+                    {{#each Feed}}
+                        <img src="/{{this.post}}" alt="there has been a prolem">
+                        {{!-- {{this.post}} --}}
+                        <div class="desc">Description: {{this.desc}}</div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

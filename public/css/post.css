@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+}
+header{
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+
+header h1{
+    margin-left: 2vw;
+}
+
+#container{
+    /* border: 2px solid red; */
+    height: 93.4vh;
+    position: relative;
+}
+
+#form{
+    background-color: #373737;
+    /* position: absolute;
+    top: 10vh;
+    left: 30%; */
+
+    margin: auto;
+    margin-top: 10vh;
+    height: 60%;
+    width: 40%;
+}
+
+#form input{
+    position: absolute;
+    top: 60%;
+    margin-left: 2vw;
+
+}
+
+#form input[type="submit"]{
+    /* background-color: rgb(0, 157, 255); */
+    padding: 1vh;
+    position: absolute;
+    top: 60%;
+    /* right: 10% */
+    margin-left: 30%;
+    border: none;
+    border-radius: 3vh;
+}
+#form input[type="submit"]:hover{
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+
+#pic{
+    border: 2px solid gray;
+    position: absolute;
+    top: 15%;
+    width: 40%;
+    height: 40%;
+    z-index: 200;
+    overflow:hidden;
+    
+}
+
+#photoPreview{
+    height: auto;
+    width: 100%;
+}
+
+#description{
+    background-color: #373737;
+    position: absolute;
+    top: 60vh;
+    width: 40%;
+    height: 30%;
+}
+
+#description textarea{
+    margin-left: 5%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>meta_links}}
+    <title>Home Page</title>
+
+</head>
+
+<link rel="stylesheet" href="../css/indexstyle.css">
+
+<body>
+    <header>
+        <nav id="_navbar">
+            <ul>
+                <li><a id="_home" href="/">Home</a></li>
+                <li><a id="_services" href="/services">Services</a></li>
+                <li><a id="_contact" href="/contact">Contact</a></li>
+                <li><a id="_about" href="/about">About</a></li>
+            </ul>
+
+            <form id="_search" method="get" action="https://www.google.com/search">
+                <input id="_search_bar" type="text" placeholder="search" required="required" name="search">
+                <input id="_search_button" type="submit" value="search">
+            </form>
+
+        </nav>
+
+    </header>
+
+    <div id="_menu">
+        <div id="_left">
+            <h1>
+                Freelancing Website
+            </h1>
+
+        </div>
+
+
+
+
+        <div id="_right">
+
+            <form action="/login" id="_signin_form" method="POST">
+                <h1><u>Login</u></h1>
+                <input type="email" placeholder="email" name="email" id="_email">
+                <input type="password" id="_password" placeholder="password" name="password">
+                <a href="/forgotpassword" id="_forget_password">forgot password ??</a>
+                <input type="submit" value="Log in" id="_login_button">
+                <br>
+                <p id="_err">{{error}}</p>
+                <p id="_signup">don't have an account <a href="/signup">Sign up</a></p>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

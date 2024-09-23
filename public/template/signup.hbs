@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <header>
+        <nav id="_navbar">
+            <ul>
+                <li><a id="_home" href="/">Home</a></li>
+                <li><a id="_services" href="/services">Services</a></li>
+                <li><a id="_contact" href="/contact">Contact</a></li>
+                <li><a id="_about" href="/about">About</a></li>
+            </ul>
+
+            <form id="_search" action="https://www.google.com/search">
+                <input id="_search_bar" type="text" placeholder="search" name="search">
+                <input id="_search_button" type="submit" value="search">
+            </form>
+
+        </nav>
+
+    </header>
+
+    <div id="_container2">
+        <div id="_heading">
+            <h1>Sign up</h1>
+        </div>
+        <div id="_signupform">
+            <form action="/signup" method="POST" id="_signup">
+                <input type="text" name="name" id="_name" placeholder="Name">
+                <input type="text" name="surname" id="_surname" placeholder="Surname">
+                <input type="text" name="username" id="_username" placeholder="Username">
+                <input type="email" name="email" id="_email" placeholder="Email">
+                <input type="password" name="password" id="_password" placeholder="Password">
+                <input type="password" name="confirmpassword" id="_confirmpassword" placeholder="Confirm Password">
+                <input type="submit" value="submit" id="_submitbutton">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

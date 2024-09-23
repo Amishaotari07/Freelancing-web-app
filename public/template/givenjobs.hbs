@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given Jobs</title>
+    <link rel="stylesheet" href="../css/givenjobs.css">
+</head>
+<body>
+    <header>
+        <h1>Given Jobs</h1>
+    </header>
+    <div id="container">
+        {{#each Ajobs}}
+    <div class="container">
+        <h3>Job by: {{this.jobowner}}</h3>
+        <p>Job description: {{this.jobdescription}}</p>
+        <p>Amount: {{this.amount}}</p>
+        <a href="/profile2/{{this.freelancer}}">Given to: {{this.freelancer}}</a>
+        {{!-- <p>email : {{this.email}}</p> --}}
+        <form action="/jobdone/{{this._id}}/{{this.freelancer}}" method="POSt">
+            {{!-- <input type="submit" value="submit" class="done"> --}}
+        </form>
+        <form action="#">
+            {{!-- <input type="submit" value="cancel" class="cancel"> --}}
+        </form>
+    </div>
+    {{/each}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My jobs {{userdata.username}}</title>
+    <link rel="stylesheet" href="../css/myjobs.css">
+</head>
+
+<body>
+    <header id="heading">
+        <h1>My Jobs {{userdata.username}}</h1>
+    </header>
+
+    <div id="container">
+        {{#each biddata}}
+            <div class="requests">
+                <h3 class="desc">Job Description:</h3>
+                <p class="desc">{{this.jobdescription}}</p>
+                <a href="#" class="desc">{{this.sender}}</a>
+                <p class="desc">{{this.mydesc}}</p>
+                <form action="/givejob/{{this.receiver}}/{{this.sender}}/{{this.mydesc}}" method="POST">
+                    <button class="extra2" type="submit" value="give job">Give Job</button>
+                </form>
+                <form action="/deletejob/{{this.jobdescription}}/{{this.receiver}}" method="POST">
+                    <button class="extra" type="submit" value="Delete job">Delete Job</button>
+                </form>
+            </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

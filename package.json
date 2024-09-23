@@ -1,0 +1,35 @@
+{
+  "name": "sagar-csmss-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sagar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "crypto": "^1.0.1",
+    "ember": "^1.0.3",
+    "ember-truth-helpers": "^3.1.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "express-sessions": "^1.0.6",
+    "handlebars": "^4.7.7",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "^4.2.0",
+    "moment": "^2.29.4",
+    "mongoose": "^5.13.16",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

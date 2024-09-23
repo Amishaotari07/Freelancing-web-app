@@ -1,0 +1,84 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #272727;
+}
+
+#heading{
+    background-color: rgb(0, 157, 255);
+    color: white;
+
+}
+
+#heading h1{
+    margin-left: 2vw;
+}
+
+#container{
+    /* border: 2px solid red; */
+    height: 93.8vh;
+    overflow-y: auto;
+    width: 100vw;
+    position: absolute;
+}
+
+.requests{
+    background-color: #373737;
+    width: 95vw;
+    /* height: 25vh; */
+    padding: 3vh 3vw;
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.requests .desc{
+    color: white;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    text-align: justify ;
+    width: 80%;
+    text-decoration: none;
+}
+
+.requests button{
+    columns: white;
+    background-color: rgb(0, 157, 255);
+    border: none;
+    border-radius: 2vh;
+}
+.requests .extra{
+    position: absolute;
+    top: 10vh;
+    right: 3vw;
+    height: 5vh;
+    width: 5vw;
+}
+
+.requests .extra2{
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+    height: 5vh;
+    width: 5vw;
+    /* margin-top: 3vh; */
+}
+
+.requests .extra:hover{
+    color: black;
+    background-color: white;
+}
+.requests .extra2:hover{
+    color: black;
+    background-color: white;
+}

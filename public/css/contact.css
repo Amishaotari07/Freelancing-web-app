@@ -1,0 +1,204 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+    /* text-decoration: none; */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;  
+    background-color: #272727;
+}
+header{
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 10%;
+    border-bottom: 1px solid rgb(0, 157, 255);
+}
+
+#_navbar ul{
+    display: flex;
+    /* margin: 10px 15px; */
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+}
+#_navbar{
+    /* border: 2px solid blueviolet; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+#_navbar ul li{
+    list-style: none;
+    /* border: 2px solid yellow; */
+    margin: 0px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#_navbar ul li a{
+    /* border: 2px solid red; */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding:10px 25px;
+    
+    position: relative;
+    /* border: 2px solid rgb(0, 157, 255);   */
+}
+
+#_navbar a::before{
+    content: "";
+    border: 2px solid rgb(0, 157, 255);  
+    width: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+
+#_navbar a:hover::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black ;
+}
+
+#_navbar #_contact::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black;
+}
+
+#_search{
+    /* border: 2px solid red; */
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#_search_bar{
+    border-radius: 60px;
+    padding: 0px 5px;
+    height: 32%;
+    font-size: 1rem;
+
+    border: none;
+    outline: none;
+}
+
+#_search_button{
+    border-radius: 60px;
+    height: 32%;
+    text-align: center;
+    align-items: center;
+    padding: 1px 5px;
+    font-size: 0.8rem;
+
+    position: absolute;
+    right: 0px;
+
+    border: none;
+    outline: none;
+    background-color: rgb(0, 157, 255);
+}
+
+
+/* menu................................... */
+
+#_container2{
+    /* border: 2px solid red; */
+    height: 90%;
+    width: 100%;
+
+    display: grid;
+    /* flex-wrap: wrap; */
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 4fr;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    padding-left: 2vw;
+    
+}
+
+#_heading{
+    color: rgb(0, 157, 255);
+    font-size: 2em;
+    /* border: 1px solid green; */
+    grid-area:1/1/2/4 ;
+}
+.box{
+    /* border: 1px solid blueviolet; */
+    border-radius: 20px;
+    height: 90%;
+    width: 95%;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 157, 255);
+}
+
+.box h1{
+    padding: 2vh;
+}
+
+.box #_developerEmailId{
+    color: black;
+    text-decoration: underline;
+    padding-top: 5vh;
+}
+
+.box h4{
+    color: black;
+    padding-top: 10vh;
+}
+
+.box #_info{
+    color: black;
+    justify-content: center;
+    text-align: justify;
+    padding: 0vh 5vh;
+}
+#_feedback{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#feedback input[type=text]{
+    /* width: 70%; */
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+#_feedback input[type = submit]{
+    background-color: white;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 2vh;
+    text-align: center;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+
+<body>
+    {{!--
+    <script src="http://localhost:3030/socket.io/socket.io.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"
+        integrity="sha512-zN6KYOtONNTOGXz0RkWX2EpavN9VdIs+2w+To+fhciFv83YA9maUpi2lzZWrOfKXdFIZZomWufBznkyHi3a8oQ=="
+        crossorigin="anonymous"></script>
+
+
+    <header id="_heading">
+        <h1>{{contactedUser.username}}</h1>
+    </header>
+    <div id="_container">
+        <div id="_left-navbar">navbar</div>
+        <div id="_chat">
+            {{!-- {{#each chatdata}}
+            <div class="message right" hidden="true">
+
+            </div>
+            <div class="message left" hidden="true">
+
+            </div>
+            {{/each}} --}}
+            <div class="message right" id="rmsg"></div>
+            <div class="message left" id="lmsg"></div>
+
+            <div id="_form">
+                <form id="my-form">
+                    <input type="text" name="message" id="_message" placeholder="type a message">
+                    <button type="submit" id="_send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let socket = io.connect('http://localhost:3030/chats');
+
+        socket.on('message', (data) => {
+            document.querySelector('#rmsg').innerHTML = data;
+            console.log('in socekt message');
+        });
+
+
+        function sendMessage() {
+            const inp = document.querySelector('#_message');
+            const message = inp.value;
+            console.log('in function');
+            socket.emit('message', message);
+        }
+
+        const form = document.querySelector('#my-form');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const inp = document.querySelector('#_message');
+            const message = inp.value;
+            console.log(message)
+            try {
+                const response = await fetch('/chatdata/{{userData.username}}/{{contactedUser.username}}', {
+                    method: 'POST',
+                    body: message
+                });
+
+                const result = await response.json();
+                console.log(result);
+                socket.emit('message', message);
+            } catch (error) {
+                console.error(error);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

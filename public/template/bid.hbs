@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid {{jobre.description}}</title>
+    <link rel="stylesheet" href="../css/bid.css">
+</head>
+<body>
+    <div id="_heading">
+        <h1>Freelancing website</h1>
+    </div>
+    <div id="_bidform">
+        <a href="#">
+
+        <h2>Job by: {{jobreq.username}}</h2>
+        </a>
+        <h3>{{jobreq.genere}}</h3>
+        <p>{{jobreq.description}}</p>
+        <form action="/bid/{{jobreq.username}}/{{userData.username}}/{{jobreq.description}}" method="POST">
+            <input class="amount" name="amount" type="text" placeholder="AMOUNT EXPECTED RS"><br>
+            <textarea class="amount" name="description" id="desc" cols="50" rows="10" placeholder="description"></textarea><br>
+            <button type="submit" id="_btn">Bid</button>
+        </form>
+    </div>
+</body>
+</html>

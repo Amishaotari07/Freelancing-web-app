@@ -1,0 +1,153 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+    /* text-decoration: none; */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;  
+    background-color: #272727;
+
+    
+}
+header{
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 10%;
+    border-bottom: 1px solid rgb(0, 157, 255);
+}
+
+#_navbar ul{
+    display: flex;
+    /* margin: 10px 15px; */
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+}
+#_navbar{
+    /* border: 2px solid blueviolet; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+#_navbar ul li{
+    list-style: none;
+    /* border: 2px solid yellow; */
+    margin: 0px 5px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#_navbar ul li a{
+    /* border: 2px solid red; */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding:10px 25px;
+    
+    position: relative;
+    /* border: 2px solid rgb(0, 157, 255);   */
+}
+
+#_navbar a::before{
+    content: "";
+    border: 2px solid rgb(0, 157, 255);  
+    width: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+
+#_navbar a:hover::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black ;
+}
+
+#_navbar #_about::before{
+    width: 100%;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 20px black;
+}
+
+#_search{
+    /* border: 2px solid red; */
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#_search_bar{
+    border-radius: 60px;
+    padding: 0px 5px;
+    height: 32%;
+    font-size: 1rem;
+
+    border: none;
+    outline: none;
+}
+
+#_search_button{
+    border-radius: 60px;
+    height: 32%;
+    text-align: center;
+    align-items: center;
+    padding: 1px 5px;
+    font-size: 0.8rem;
+
+    position: absolute;
+    right: 0px;
+
+    border: none;
+    outline: none;
+    background-color: rgb(0, 157, 255);
+}
+
+
+/* about us................................ */
+
+#_container2{
+    /* color: white; */
+    justify-content: center;
+    text-align: justify;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 90%;
+    padding-left: 3vh;
+}
+
+#_heading{
+    color: rgb(0, 157, 255);
+    font-size: 2em;
+    margin-bottom: 3vh;
+}
+
+#_data{
+    color: white;
+    margin-right: 3vw;
+}
